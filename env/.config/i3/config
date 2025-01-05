@@ -139,6 +139,8 @@ bindsym $mod+Shift+0 move container to workspace 10
 # Assign to workspace #
 #######################
 
+assign [class="Code"] 2
+for_window [class="Code"] focus
 assign [class="DBeaver"] 4
 for_window [class="DBeaver"] focus
 assign [class="(.*join\?action\=join.*|.*zoom.*)"] 7
@@ -229,4 +231,5 @@ bindsym $mod+x mode "$mode_system"
 bar {
         status_command i3status
 	font pango:monospace 10
+	tray_output primary
 }
