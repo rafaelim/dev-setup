@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+curl -fsSL https://go.dev/dl/go1.23.4.linux-amd64.tar.gz -o /tmp/go1.23.4.tar.gz
+sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf /tmp/go1.23.4.tar.gz
+
