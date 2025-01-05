@@ -3,6 +3,7 @@
 	name = Rafael Lima
 
 [alias]
+    a = add
     b = branch
     ci = commit
     co = checkout
