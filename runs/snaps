@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+sudo snap install gimp
+sudo snap install vlc
+sudo snap install another-redis-desktop-manager
+sudo snap install postman
+sudo snap install code --classic
