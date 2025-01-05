@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+sudo apt -y install xclip ripgrep arandr maim playerctl pavucontrol jq fzf
+
