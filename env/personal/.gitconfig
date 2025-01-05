@@ -1,0 +1,15 @@
+[user]
+	email = email@example.com
+	name = Rafael Lima
+
+[alias]
+    b = branch
+    ci = commit
+    co = checkout
+    st = status
+    s = status
+    h = log --pretty=format:'%Cblue%h %Cgreen %ar%Creset %s'
+    l = log --decorate --oneline
+    current-branch = rev-parse --symbolic-full-name --abbrev-ref HEAD
+    ps = !git push origin HEAD:$(git current-branch)
+    pl = !git pull origin HEAD:$(git current-branch)
