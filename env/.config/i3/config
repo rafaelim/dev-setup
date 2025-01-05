@@ -139,14 +139,16 @@ bindsym $mod+Shift+0 move container to workspace 10
 # Assign to workspace #
 #######################
 
-assign [class="firefox"] 9
-for_window [class="firefox"] focus
-assign [class="Slack"] 8
-for_window [class="Slack"] focus
+assign [class="DBeaver"] 4
+for_window [class="DBeaver"] focus
 assign [class="(.*join\?action\=join.*|.*zoom.*)"] 7
 for_window [class="(.*join\?action\=join.*|.*zoom.*)"] floating enable
 for_window [class="(.*join\?action\=join.*|.*zoom.*)" title="Zoom - Licensed Account"] floating disable
 for_window [class="(.*join\?action\=join.*|.*zoom.*)" title="Zoom Meeting"] floating disable
+assign [class="Slack"] 8
+for_window [class="Slack"] focus
+assign [class="firefox"] 9
+for_window [class="firefox"] focus
 
 ######################
 # Keyboard shortcuts #
