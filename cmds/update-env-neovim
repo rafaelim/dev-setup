@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+printf "\n" >> ~/.bashrc
+echo "# Neovim config " >> ~/.bashrc
+echo "export PATH=\"\$PATH:/opt/nvim-linux64/bin\"" >> ~/.bashrc
+echo "alias vim=nvim" >> ~/.bashrc
