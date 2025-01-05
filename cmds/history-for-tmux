@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+printf "\n" >> ~/.bashrc
+echo "# avoid duplicates.. " >> ~/.bashrc
+echo "export HISTCONTROL=ignoredups:erasedups" >> ~/.bashrc
+echo "# append history entries: " >> ~/.bashrc
+echo "shopt -s histappend" >> ~/.bashrc
+echo "# After each command, save and reload history: " >> ~/.bashrc
+echo "export PROMPT_COMMAND=\"history -a; history -n; \$PROMPT_COMMAND\"" >> ~/.bashrc
