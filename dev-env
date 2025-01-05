@@ -5,6 +5,7 @@ cp -r ./env/.config/nvim $HOME/.config
 cp -r ./env/.config/i3 $HOME/.config
 cp -r ./env/.config/i3status $HOME/.config
 
+mkdir $HOME/.local/bin
 cp -r ./env/.local/bin/tmux-sessionizer $HOME/.local/bin/tmux-sessionizer
 
 cp ./env/personal/.gitconfig $HOME

@@ -1,18 +1,23 @@
 #!/usr/bin/env bash
 
+echo "Init" 
+
+sudo apt -y update
+sudo apt -y install curl
+
 echo "Running installer scripts"
 runs_dir=`find ./runs -mindepth 1 -maxdepth 1 -executable`
 for script in $runs_dir; do
-    echo "Running installer script: $script"
+    printf "\n\n\nRunning installer script: $script"
     $script
 done
-echo "Installer scripts done"
+echo "############################### Installer scripts done"
 
 echo "Running command scripts"
 cmds_dir=`find ./cmds -mindepth 1 -maxdepth 1 -executable`
 
 for script in $cmds_dir; do
-    echo "Running command script: $script"
+    printf "\n\n\nRunning command script: $script"
     $script
 done
-echo "Command scripts done"
+echo "############################# Command scripts done"
