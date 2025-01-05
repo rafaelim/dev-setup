@@ -9,9 +9,7 @@ set $mod Mod4
 font pango: monospace 15
 
 # Remove borders
-for_window [class="^.*"] border pixel 2
-                          # class                 border  backgr. text    indicator child_border
-for_window [class="^.*"] client.focused          #77dd77 #285577 #ffffff #2e9ef4   #285577
+for_window [class="^.*"] border pixel 0
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -33,6 +31,11 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
+######################
+#  Init on Startup   #
+######################
+exec --no-startup-id i3-msg 'exec /usr/bin/slack'
+exec --no-startup-id i3-msg 'exec /usr/bin/zoom'
 
 ######################
 #    Window focus    #
@@ -229,7 +232,7 @@ bindsym $mod+x mode "$mode_system"
 #     Status Bar     #
 ######################
 bar {
-        status_command i3status
-	font pango:monospace 10
-	tray_output primary
+    status_command i3status
+    font pango:monospace 10
+    tray_output primary
 }
