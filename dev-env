@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+cp -r ./env/.config/tmux $HOME/.config
+cp -r ./env/.config/nvim $HOME/.config
+cp -r ./env/.config/i3 $HOME/.config
+cp -r ./env/.config/i3status $HOME/.config
+
+cp -r ./env/.local/bin/tmux-sessionizer $HOME/.local/bin/tmux-sessionizer
+
+cp ./env/personal/.gitconfig $HOME
+cp ./env/personal/.xinitrc $HOME
+cp ./env/personal/.xrandr.sh $HOME
+cp ./env/personal/.Xresources $HOME
+
