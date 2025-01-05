@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 
 sudo apt -y install make gcc ripgrep unzip git xclip arandr maim playerctl pavucontrol jq fzf
+
+sudo apt -y install blueman pulseaudio pulseaudio-module-bluetooth
