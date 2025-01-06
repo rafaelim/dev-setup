@@ -1,3 +1,9 @@
 #!/usr/bin/env bash
 
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+
+cd $HOME/.config/
+mkdir -p xdg-desktop-portal 
+
+echo "[preferred]" >> $HOME/.config/xdg-desktop-portal/portals.conf
+echo "default=gtk;wlr" >> $HOME/.config/xdg-desktop-portal/portals.conf
