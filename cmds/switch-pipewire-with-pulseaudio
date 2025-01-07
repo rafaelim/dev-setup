@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+systemctl --user mask pipewire.service pipewire.socket wireplumber.service pipewire-pulse.service pipewire-pulse.socket
+systemctl --user unmask pulseaudio pulseaudio.service pulseaudio.socket
