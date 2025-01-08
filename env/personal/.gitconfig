@@ -12,5 +12,5 @@
     h = log --pretty=format:'%Cblue%h %Cgreen %ar%Creset %s'
     l = log --decorate --oneline
     current-branch = rev-parse --symbolic-full-name --abbrev-ref HEAD
-    ps = !git push origin HEAD:$(git current-branch)
-    pl = !git pull origin HEAD:$(git current-branch)
+    ps = !git push origin $(git current-branch)
+    pl = !git pull origin $(git current-branch)
