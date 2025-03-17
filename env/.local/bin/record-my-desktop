@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+while getopts x:w:h: flag
+do
+    case "${flag}" in
+        x) x=${OPTARG};;
+        w) w=${OPTARG};;
+        h) h=${OPTARG};;
+    esac
+done
+
+filename="$EPOCHSECONDS"
+filepath="$HOME/Videos/recordmydesktop"
+output="$filepath/$filename"
+
+recordmydesktop --x$x --width$w --height$h --fps=15 --no-sound --stop-shortcut=Control+s -o $output
+
+if [ "$?" -ne "0" ]
+then
+  notify-send "Failed to complete the record"
+  return 
+fi
+
+ffmpeg -i $output.ogv -vcodec libx264 "$output.mp4"
+if [ "$?" -eq "0" ]
+then
+  notify-send "Finish recording successfully - Filename: $filename.mp4"
+else
+  notify-send "Recording failed while converting the output to mp4"
+  return 
+fi
