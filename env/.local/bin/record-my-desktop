@@ -18,7 +18,7 @@ recordmydesktop --x$x --width$w --height$h --fps=15 --no-sound --stop-shortcut=C
 if [ "$?" -ne "0" ]
 then
   notify-send "Failed to complete the record"
-  return 
+  exit 1 
 fi
 
 ffmpeg -i $output.ogv -vcodec libx264 "$output.mp4"

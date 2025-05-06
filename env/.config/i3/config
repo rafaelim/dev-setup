@@ -235,7 +235,7 @@ bindsym $mod+x mode "$mode_system"
 ######################
 set $record Record (m)ain screen, Record (s)econdary screen
 mode "$record" {
-        bindsym m exec --no-startup-id $HOME/.local/bin/record-my-desktop -x=1920 -w=2560 -h=1442, mode "default"
+        bindsym m exec --no-startup-id $HOME/.local/bin/record-my-desktop -x=1920 -w=2560 -h=1440, mode "default"
         bindsym s exec --no-startup-id $HOME/.local/bin/record-my-desktop -x=0 -w=1920 -h=1080, mode "default"
 
         # back to normal: Enter or Escape
