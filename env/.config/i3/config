@@ -93,8 +93,7 @@ bindsym $mod+a focus parent
 #   Display Set Up   #
 ######################
 
-exec --no-startup-id xrandr --output DP-0 --primary
-exec --no-startup-id sh /home/rafaelim/.xrandr.sh
+exec --no-startup-id sleep 2 && sh /home/rafaelim/.xrandr.sh
 exec --no-startup-id xset -dpms
 exec --no-startup-id xset s off
 
