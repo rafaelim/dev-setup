@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+command -v i3lock-fancy &>/dev/null && { echo "i3lock-fancy already installed, skipping."; exit 0; }
+
+sudo apt -y install i3lock-fancy

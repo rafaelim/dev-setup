@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
 
+dpkg -l slack-desktop &>/dev/null && { echo "Slack already installed, skipping."; exit 0; }
+
 curl -fsSL https://downloads.slack-edge.com/desktop-releases/linux/x64/4.41.105/slack-desktop-4.41.105-amd64.deb -o /tmp/slack.deb
 sudo dpkg -i /tmp/slack.deb

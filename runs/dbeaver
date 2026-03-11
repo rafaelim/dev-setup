@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+command -v dbeaver &>/dev/null && { echo "DBeaver already installed, skipping."; exit 0; }
+
 sudo add-apt-repository ppa:serge-rider/dbeaver-ce
 sudo apt-get update
 sudo apt-get install dbeaver-ce

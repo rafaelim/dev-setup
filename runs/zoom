@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+dpkg -l zoom &>/dev/null && { echo "Zoom already installed, skipping."; exit 0; }
+
 sudo apt -y install libxcb-xtest0
 curl -fsSL https://zoom.us/client/latest/zoom_amd64.deb -o /tmp/zoom.deb
 sudo dpkg -i /tmp/zoom.deb

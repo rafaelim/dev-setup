@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
-printf "\n" >> ~/.bashrc
-echo "# Go config " >> ~/.bashrc
-echo "export PATH=\"\$PATH:/usr/local/go/bin\"" >> ~/.bashrc
+grep -qF '/usr/local/go/bin' ~/.bashrc || {
+    printf "\n" >> ~/.bashrc
+    echo "# Go config" >> ~/.bashrc
+    echo "export PATH=\"\$PATH:/usr/local/go/bin\"" >> ~/.bashrc
+}

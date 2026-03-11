@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+[ -d "$HOME/.nvm" ] && { echo "nvm already installed, skipping."; exit 0; }
+
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
 source ~/.nvm/nvm.sh
 nvm install 22

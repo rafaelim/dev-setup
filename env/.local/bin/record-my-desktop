@@ -13,6 +13,8 @@ filename="$EPOCHSECONDS"
 filepath="$HOME/Videos/recordmydesktop"
 output="$filepath/$filename"
 
+mkdir -p "$filepath"
+
 recordmydesktop --x$x --width$w --height$h --fps=15 --no-sound --stop-shortcut=Control+s -o $output
 
 if [ "$?" -ne "0" ]
@@ -27,5 +29,5 @@ then
   notify-send "Finish recording successfully - Filename: $filename.mp4"
 else
   notify-send "Recording failed while converting the output to mp4"
-  return 
+  exit 1
 fi

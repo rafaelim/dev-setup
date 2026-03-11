@@ -20,10 +20,12 @@ return {
     -- Define your formatters
     formatters_by_ft = {
       lua = { "stylua" },
-      javascript = { "prettierd", "prettier", stop_after_first = true },
-      typescript = { "prettierd", "prettier", stop_after_first = true },
-      javascriptreact = { "prettierd", "prettier", stop_after_first = true },
-      typescriptreact = { "prettierd", "prettier", stop_after_first = true },
+      javascript = { "prettier" },
+      typescript = { "prettier" },
+      javascriptreact = { "prettier" },
+      typescriptreact = { "prettier" },
+      python = { "black" },
+      go = { "goimports" },
     },
     -- Set default options
     default_format_opts = {

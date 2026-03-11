@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
-curl -fsSL https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz -o /tmp/nvim-linux64.tar.gz
-sudo rm -rf /opt/nvim
-sudo tar -C /opt -xzf /tmp/nvim-linux64.tar.gz
+[ -d /opt/nvim-linux-x86_64 ] && { echo "Neovim already installed, skipping."; exit 0; }
+
+curl -fsSL https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz -o /tmp/nvim.tar.gz
+sudo rm -rf /opt/nvim-linux-x86_64
+sudo tar -C /opt -xzf /tmp/nvim.tar.gz

@@ -23,7 +23,6 @@ vim.keymap.set({ 'n', 'v' }, '<leader>d', '"_d')
 
 vim.keymap.set('n', 'Q', '<nop>')
 vim.keymap.set('n', '<C-f>', '<cmd>silent !tmux neww tmux-sessionizer<CR>')
-vim.keymap.set('n', '<leader>f', vim.lsp.buf.format)
 
 vim.keymap.set('n', '<C-k>', '<cmd>cnext<CR>zz')
 vim.keymap.set('n', '<C-j>', '<cmd>cprev<CR>zz')
@@ -37,9 +36,6 @@ vim.keymap.set('n', '<leader>l', 'viwyoconsole.log(<Esc>pa);<Esc>')
 vim.keymap.set('v', '<leader>g', 'yoconsole.log(<Esc>pa);<Esc>')
 vim.keymap.set('n', '<leader>L', 'viwyOconsole.log(<Esc>pa);<Esc>')
 
-vim.keymap.set('n', '<leader><leader>', function()
-  vim.cmd 'so'
-end)
 
 vim.schedule(function()
   vim.opt.clipboard = 'unnamedplus'

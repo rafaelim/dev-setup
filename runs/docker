@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+command -v docker &>/dev/null && { echo "Docker already installed, skipping."; exit 0; }
+
 ## Apt
 ## https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
 
